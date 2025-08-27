@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Life Hub Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1 id="date"></h1>
+    <p id="statusMsg">Let’s start strong!</p>
+  </header>
+
+  <nav>
+    <button class="tab-btn active" data-tab="daily">Daily Goals</button>
+    <button class="tab-btn" data-tab="projects">Projects</button>
+    <button class="tab-btn" data-tab="journal">Journal</button>
+  </nav>
+
+  <main>
+    <!-- Daily Goals Tab -->
+    <section id="daily" class="tab-content active">
+      <div class="grid-container">
+        <div class="left-column">
+          <h2>Daily Goals</h2>
+          <label class="task"><input type="checkbox" id="task1"> Workout 🏋️</label>
+          <label class="task"><input type="checkbox" id="task2"> Cardio 🏃</label>
+          <label class="task"><input type="checkbox" id="task3"> Book Read 📖</label>
+          <label class="task"><input type="checkbox" id="task4"> Coding / ISS 💻</label>
+        </div>
+        <div class="right-column">
+          <h2>Progress</h2>
+          <div class="progress-bar">
+            <div id="progressFill"></div>
+          </div>
+          <p id="progressDisplay">0% Complete</p>
+          <h3>Project of the Day</h3>
+          <p id="todayProject"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Tab -->
+    <section id="projects" class="tab-content">
+      <h2>Projects</h2>
+      <input type="text" id="projectInput" placeholder="Add a new project">
+      <button id="addProjectBtn">Add Project</button>
+      <ul id="projectsList"></ul>
+    </section>
+
+    <!-- Journal Tab -->
+    <section id="journal" class="tab-content">
+      <h2>Journal / Notes</h2>
+      <textarea id="notes" placeholder="Optional notes..."></textarea>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
